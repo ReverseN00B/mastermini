@@ -1,0 +1,28 @@
+{
+  "name": "mastermini",
+  "version": "1.0.0",
+  "description": "In today's episode, we're going to make an awesome login and registration form with sliding animation just by using HTML and CSS and little bit of JavaScript.",
+  "main": "app1.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "dev": "nodemon src/app1.js -e js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ReverseN00B/mastermini.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/ReverseN00B/mastermini/issues"
+  },
+  "homepage": "https://github.com/ReverseN00B/mastermini#readme",
+  "dependencies": {
+    "express": "^4.17.1",
+    "mongoose": "^5.12.5"
+  },
+  "devDependencies": {
+    "nodemon": "^2.0.7"
+  }
+}
