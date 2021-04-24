@@ -9,9 +9,10 @@ const port = process.env.PORT || 3031;
 const static_path = path.join(__dirname, "../public");
 //console.log(path.join(__dirname,"../public"));
 app.use(express.static(static_path));
+app.set("view engine", "hbs");
 
-app.get("/index.html",(req,res)=> {
-  res.sendFile(static_path);
+app.get("/",(req,res)=> {
+  res.render("index");
 });
 
 
@@ -38,7 +39,7 @@ app.post('/process_post', async (req, res)=>{
    res.status(201).sendFile(static_path+"/index.html");
 
   }else{
-    res.send("password mismatched")
+    res.render("passwordmismatch");
   }
   
  
@@ -63,13 +64,13 @@ app.post('/login', async (req, res)=>{
     const logincheck = await Register.findOne({email:email});
     
     if(logincheck.password === password){
-      res.status(201).sendFile(static_path+"/homepage.html");
+      res.status(201).render("homepage")
     }
     else{
-      res.send("Invalid Login Credentials");
+      res.render("invalid");
     }
   }catch(error){
-    res.status(400).send("Invalid Email");
+    res.status(400).render("invalid");
   }
 })
 
