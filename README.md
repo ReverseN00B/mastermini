@@ -1,1 +1,1 @@
-https://reversen00b.github.io/mastermini/views/
+https://reversen00b.github.io/mastermini/views/index.hbs
