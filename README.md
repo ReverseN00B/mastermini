@@ -1,1 +1,1 @@
-https://reversen00b.github.io/mastermini/public
+https://reversen00b.github.io/mastermini/src/
